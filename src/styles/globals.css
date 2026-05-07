@@ -1,0 +1,50 @@
+:root {
+  --red: #E8001C;
+  --red-dark: #B0001A;
+  --red-bright: #FF1A35;
+  --yellow: #F5C800;
+  --yellow-light: #FFE566;
+  --white: #FAFAF5;
+  --cream: #F5EDD8;
+  --dark: #0A0A0A;
+  --dark-2: #111111;
+  --dark-3: #1A1A1A;
+  --gray: #888888;
+  --font-display: 'Bebas Neue', 'Arial Black', sans-serif;
+  --font-body: 'Montserrat', 'Arial', sans-serif;
+  --font-italic: 'Playfair Display', 'Georgia', serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--dark);
+  color: var(--white);
+  overflow-x: hidden;
+}
+
+section {
+  position: relative;
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: var(--font-body);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}

@@ -1,0 +1,202 @@
+.horizontal {
+  position: relative;
+  background: var(--dark);
+  height: 100vh;
+  overflow: hidden;
+}
+
+.horizontal__label {
+  position: absolute;
+  top: 32px;
+  right: 40px;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(250, 250, 245, 0.35);
+}
+
+.hlabel__arrow {
+  animation: arrowPulse 1.2s infinite ease-in-out alternate;
+}
+
+@keyframes arrowPulse {
+  from { transform: translateX(0); }
+  to   { transform: translateX(6px); }
+}
+
+.horizontal__track {
+  display: flex;
+  height: 100vh;
+  will-change: transform;
+}
+
+/* Intro Panel */
+.hpanel--intro {
+  min-width: 50vw;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 80px 0 60px;
+  background: var(--dark);
+  position: relative;
+  overflow: hidden;
+}
+
+.hpanel--intro::after {
+  content: 'INDOMIE';
+  position: absolute;
+  bottom: -20px;
+  left: -10px;
+  font-family: var(--font-display);
+  font-size: 20vw;
+  color: rgba(255, 255, 255, 0.02);
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+}
+
+.hpanel--intro .hpanel__big-title {
+  font-family: var(--font-display);
+  font-size: clamp(72px, 10vw, 140px);
+  line-height: 0.9;
+  letter-spacing: 0.02em;
+  color: var(--white);
+}
+
+.hpanel--intro .hpanel__tag {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 16px;
+}
+
+.hpanel--intro .hpanel__intro-sub {
+  font-size: 0.88rem;
+  color: rgba(250, 250, 245, 0.45);
+  margin-top: 20px;
+  letter-spacing: 0.05em;
+}
+
+/* Product Panels */
+.hpanel--product {
+  min-width: 50vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  position: relative;
+}
+
+.hpanel--product::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 1px;
+  background: rgba(255,255,255,0.06);
+}
+
+.hpanel__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 48px;
+  position: relative;
+  z-index: 2;
+}
+
+.hpanel__number {
+  font-family: var(--font-display);
+  font-size: 5rem;
+  line-height: 1;
+  color: rgba(255,255,255,0.05);
+  display: block;
+  margin-bottom: -8px;
+}
+
+.hpanel__tag {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--panel-color, var(--red));
+  margin-bottom: 12px;
+}
+
+.hpanel__title {
+  font-family: var(--font-display);
+  font-size: clamp(40px, 4vw, 64px);
+  letter-spacing: 0.02em;
+  line-height: 1;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.hpanel__desc {
+  font-size: 0.85rem;
+  color: rgba(250, 250, 245, 0.5);
+  line-height: 1.8;
+  max-width: 300px;
+  margin-bottom: 32px;
+}
+
+.hpanel__btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: transparent;
+  border: 1.5px solid var(--panel-color, var(--red));
+  color: var(--panel-color, var(--red));
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+  font-family: var(--font-body);
+}
+
+.hpanel__btn:hover {
+  background: var(--panel-color, var(--red));
+  color: var(--white);
+}
+
+.hpanel__visual {
+  position: relative;
+  overflow: hidden;
+}
+
+.hpanel__img-wrap {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hpanel__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform-origin: center center;
+}
+
+.hpanel__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(10, 10, 10, 0.6) 0%,
+    transparent 50%
+  );
+  pointer-events: none;
+}
+    
